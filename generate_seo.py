@@ -1,6 +1,8 @@
 import os
+from datetime import datetime
 
-domain = "https://seoul-homecare.shop"
+domain = "https://blissbody.netlify.app"
+today = datetime.now().strftime("%Y-%m-%d")
 
 # 1. robots.txt 생성
 robots_content = f"User-agent: *\nAllow: /\n\nSitemap: {domain}/sitemap.xml\n"
@@ -11,17 +13,32 @@ print("✅ robots.txt 생성 완료!")
 # 2. sitemap.xml 생성
 sitemap_lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    f'  <url><loc>{domain}/</loc><priority>1.0</priority></url>'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 ]
 
+added_urls = set()
+
 for root, dirs, files in os.walk("."):
+    # 숨김 폴더나 가상환경 등 제외
+    dirs[:] = [d for d in dirs if not d.startswith((".", "_"))]
+    
     for file in files:
         if file.endswith(".html"):
             rel_dir = os.path.relpath(root, ".").replace("\\", "/")
-            path = file if rel_dir == "." else f"{rel_dir}/{file}"
-            priority = "1.0" if path == "index.html" else ("0.9" if "index.html" in path else "0.8")
-            sitemap_lines.append(f'  <url><loc>{domain}/{path}</loc><priority>{priority}</priority></url>')
+            
+            if rel_dir == "." and file == "index.html":
+                url = f"{domain}/"
+                priority = "1.0"
+            elif file == "index.html":
+                url = f"{domain}/{rel_dir}/"
+                priority = "0.9"
+            else:
+                url = f"{domain}/{file}" if rel_dir == "." else f"{domain}/{rel_dir}/{file}"
+                priority = "0.8"
+
+            if url not in added_urls:
+                added_urls.add(url)
+                sitemap_lines.append(f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{priority}</priority>\n  </url>")
 
 sitemap_lines.append('</urlset>')
 
