@@ -4,7 +4,7 @@ import random
 SITE_NAME = "블레스바디"
 BASE_URL = "https://blissbody.netlify.app"
 
-# 5개 업체 원본 데이터 (이미지 URL 포함)
+# 5개 업체 원본 데이터
 VENDORS = [
     {
         "name": "미인클럽테라피",
@@ -48,7 +48,7 @@ VENDORS = [
     }
 ]
 
-# 서울 / 경기 / 인천 전체 지역 데이터
+# 서울 / 경기 / 인천 전체 지역 및 동 데이터
 REGIONS = {
     # [서울 25개 구]
     "gangnam": {"name": "서울 강남구", "dongs": ["역삼동", "개포동", "청담동", "삼성동", "대치동", "신사동", "논현동", "압구정동", "세곡동", "자곡동", "일원동", "수서동", "도곡동"]},
@@ -78,63 +78,50 @@ REGIONS = {
     "jungnang": {"name": "서울 중랑구", "dongs": ["면목동", "상봉동", "중화동", "묵동", "망우동", "신내동"]},
 
     # [경기 주요 시·구]
-    "suwon": {"name": "경기 수원시", "dongs": ["팔달구", "영통구", "장안구", "권선구", "인계동", "매탄동", "광교동", "영통동", "세류동"]},
-    "seongnam": {"name": "경기 성남시", "dongs": ["분당구", "수정구", "중원구", "서현동", "야탑동", "정자동", "판교동", "수내동", "금곡동"]},
-    "goyang": {"name": "경기 고양시", "dongs": ["일산동구", "일산서구", "덕양구", "백석동", "마두동", "주엽동", "화정동", "행신동", "삼송동"]},
-    "yongin": {"name": "경기 용인시", "dongs": ["수지구", "기흥구", "처인구", "풍덕천동", "죽전동", "동백동", "신갈동", "보정동", "상현동"]},
-    "bucheon": {"name": "경기 부천시", "dongs": ["원미동", "심곡동", "중동", "상동", "소사본동", "괴안동", "오정동", "역곡동"]},
-    "ansan": {"name": "경기 안산시", "dongs": ["단원구", "상록구", "고잔동", "중앙동", "초지동", "본오동", "선부동", "와동"]},
-    "anyang": {"name": "경기 안양시", "dongs": ["만안구", "동안구", "평촌동", "범계동", "비산동", "안양동", "석수동", "호계동", "관양동"]},
-    "namyangju": {"name": "경기 남양주시", "dongs": ["다산동", "별내동", "와부읍", "진접읍", "화도읍", "평내동", "호평동", "오남읍"]},
-    "hwaseong": {"name": "경기 화성시", "dongs": ["동탄1동", "동탄2동", "향남읍", "남양읍", "봉담읍", "병점동", "반송동", "청계동"]},
-    "pyeongtaek": {"name": "경기 평택시", "dongs": ["고덕동", "비전동", "세교동", "안중읍", "포승읍", "송탄동", "서정동"]},
-    "uijeongbu": {"name": "경기 의정부시", "dongs": ["의정부동", "호원동", "장암동", "신곡동", "송산동", "자금동", "가능동", "민락동"]},
-    "siheung": {"name": "경기 시흥시", "dongs": ["정왕동", "배곧동", "은계동", "목감동", "신천동", "대야동", "은행동", "장현동"]},
-    "paju": {"name": "경기 파주시", "dongs": ["운정동", "교하동", "금촌동", "문산읍", "야당동", "동패동", "와동동"]},
-    "gimpo": {"name": "경기 김포시", "dongs": ["구래동", "장기동", "운양동", "사우동", "풍무동", "걸포동", "마산동"]},
-    "gwangmyeong": {"name": "경기 광명시", "dongs": ["철산동", "하안동", "소하동", "일직동", "광명동"]},
-    "gwangju-gy": {"name": "경기 광주시", "dongs": ["경안동", "송정동", "태전동", "오포읍", "초월읍", "곤지암읍"]},
-    "gunpo": {"name": "경기 군포시", "dongs": ["산본동", "금정동", "당동", "당정동", "대야미동", "부곡동"]},
-    "hanam": {"name": "경기 하남시", "dongs": ["미사동", "위례동", "신장동", "덕풍동", "감일동", "풍산동"]},
-    "osan": {"name": "경기 오산시", "dongs": ["원동", "궐동", "오산동", "세교동", "수청동", "갈곶동"]},
-    "icheon": {"name": "경기 이천시", "dongs": ["창전동", "관고동", "증포동", "부발읍", "안흥동"]},
+    "suwon": {"name": "경기 수원시", "dongs": ["인계동", "매탄동", "광교동", "영통동", "세류동", "권선동", "정자동", "조원동", "화서동"]},
+    "seongnam": {"name": "경기 성남시", "dongs": ["서현동", "야탑동", "정자동", "판교동", "수내동", "금곡동", "구미동", "상대원동", "신흥동"]},
+    "goyang": {"name": "경기 고양시", "dongs": ["백석동", "마두동", "주엽동", "화정동", "행신동", "삼송동", "식사동", "탄현동", "대화동"]},
+    "yongin": {"name": "경기 용인시", "dongs": ["풍덕천동", "죽전동", "동백동", "신갈동", "보정동", "상현동", "역북동", "김량장동", "구갈동"]},
+    "bucheon": {"name": "경기 부천시", "dongs": ["원미동", "심곡동", "중동", "상동", "소사본동", "괴안동", "오정동", "역곡동", "송내동"]},
+    "ansan": {"name": "경기 안산시", "dongs": ["고잔동", "중앙동", "초지동", "본오동", "선부동", "와동", "사동", "월피동", "일동"]},
+    "anyang": {"name": "경기 안양시", "dongs": ["평촌동", "범계동", "비산동", "안양동", "석수동", "호계동", "관양동", "박달동"]},
+    "namyangju": {"name": "경기 남양주시", "dongs": ["다산동", "별내동", "와부읍", "진접읍", "화도읍", "평내동", "호평동", "오남읍", "퇴계원읍"]},
+    "hwaseong": {"name": "경기 화성시", "dongs": ["동탄동", "반송동", "청계동", "영천동", "향남읍", "남양읍", "봉담읍", "병점동", "진안동"]},
+    "pyeongtaek": {"name": "경기 평택시", "dongs": ["고덕동", "비전동", "세교동", "안중읍", "포승읍", "송탄동", "서정동", "동삭동", "용이동"]},
+    "uijeongbu": {"name": "경기 의정부시", "dongs": ["의정부동", "호원동", "장암동", "신곡동", "송산동", "자금동", "가능동", "민락동", "낙양동"]},
+    "siheung": {"name": "경기 시흥시", "dongs": ["정왕동", "배곧동", "은계동", "목감동", "신천동", "대야동", "은행동", "장현동", "능곡동"]},
+    "paju": {"name": "경기 파주시", "dongs": ["운정동", "교하동", "금촌동", "문산읍", "야당동", "동패동", "와동동", "목동동", "다율동"]},
+    "gimpo": {"name": "경기 김포시", "dongs": ["구래동", "장기동", "운양동", "사우동", "풍무동", "걸포동", "마산동", "북변동", "고촌읍"]},
+    "gwangmyeong": {"name": "경기 광명시", "dongs": ["철산동", "하안동", "소하동", "일직동", "광명동", "옥길동", "학온동"]},
+    "gwangju-gy": {"name": "경기 광주시", "dongs": ["경안동", "송정동", "태전동", "오포읍", "초월읍", "곤지암읍", "역동", "쌍령동"]},
+    "gunpo": {"name": "경기 군포시", "dongs": ["산본동", "금정동", "당동", "당정동", "대야미동", "부곡동", "도마교동"]},
+    "hanam": {"name": "경기 하남시", "dongs": ["미사동", "위례동", "신장동", "덕풍동", "감일동", "풍산동", "망월동", "선동"]},
+    "osan": {"name": "경기 오산시", "dongs": ["원동", "궐동", "오산동", "세교동", "수청동", "갈곶동", "금암동", "은계동"]},
+    "icheon": {"name": "경기 이천시", "dongs": ["창전동", "관고동", "증포동", "부발읍", "안흥동", "송정동", "갈산동"]},
 
     # [인천 주요 구]
-    "bupyeong": {"name": "인천 부평구", "dongs": ["부평동", "십정동", "산곡동", "청천동", "삼산동", "갈산동", "부개동"]},
-    "namdong": {"name": "인천 남동구", "dongs": ["구월동", "간석동", "만수동", "논현동", "서창동", "도림동"]},
-    "incheon-seo": {"name": "인천 서구", "dongs": ["청라동", "루원시티", "가정동", "석남동", "검암동", "당하동", "원당동", "검단동"]},
+    "bupyeong": {"name": "인천 부평구", "dongs": ["부평동", "십정동", "산곡동", "청천동", "삼산동", "갈산동", "부개동", "일신동"]},
+    "namdong": {"name": "인천 남동구", "dongs": ["구월동", "간석동", "만수동", "논현동", "서창동", "도림동", "고잔동", "장수동"]},
+    "incheon-seo": {"name": "인천 서구", "dongs": ["청라동", "가정동", "석남동", "검암동", "당하동", "원당동", "검단동", "마전동", "신현동"]},
     "yeonsu": {"name": "인천 연수구", "dongs": ["송도동", "연수동", "동춘동", "옥련동", "청학동", "선학동"]},
     "michuhol": {"name": "인천 미추홀구", "dongs": ["주안동", "도화동", "숭의동", "용현동", "학익동", "관교동", "문학동"]},
-    "incheon-jung": {"name": "인천 중구", "dongs": ["영종동", "운서동", "하늘도시", "신포동", "연안동", "북성동"]},
-    "gyeyang": {"name": "인천 계양구", "dongs": ["계산동", "작전동", "효성동", "임학동", "박촌동", "동양동"]},
-    "incheon-dong": {"name": "인천 동구", "dongs": ["송림동", "송현동", "화수동", "만석동"]}
+    "incheon-jung": {"name": "인천 중구", "dongs": ["영종동", "운서동", "중산동", "운남동", "신포동", "연안동", "북성동", "신흥동"]},
+    "gyeyang": {"name": "인천 계양구", "dongs": ["계산동", "작전동", "효성동", "임학동", "박촌동", "동양동", "서운동", "병방동"]},
+    "incheon-dong": {"name": "인천 동구", "dongs": ["송림동", "송현동", "화수동", "만석동", "화평동", "금곡동"]}
 }
 
-def generate_sub_pages():
-    total_created = 0
-
-    for folder, data in REGIONS.items():
-        os.makedirs(folder, exist_ok=True)
+def generate_html_template(display_title, folder_name, is_dong=False, dongs_data=[], current_dong=""):
+    shuffled_vendors = random.sample(VENDORS, len(VENDORS))
+    
+    vendor_html_blocks = []
+    for idx, vendor in enumerate(shuffled_vendors, start=1):
+        tagline_formatted = vendor["tagline"].format(region_title=display_title)
+        features_formatted = vendor["features"].format(region_title=display_title)
         
-        region_title = data["name"]
-        dongs = data["dongs"]
-        page_url = f"{BASE_URL}/{folder}/"
-        
-        dong_keywords = ", ".join([f"{region_title} {d} 출장마사지" for d in dongs])
-        dong_badges = "".join([f'<span class="dong-tag">{d} 출장마사지</span>' for d in dongs])
-        
-        # 5개 업체를 매 지역마다 무작위 순서로 셔플
-        shuffled_vendors = random.sample(VENDORS, len(VENDORS))
-        
-        vendor_html_blocks = []
-        for idx, vendor in enumerate(shuffled_vendors, start=1):
-            tagline_formatted = vendor["tagline"].format(region_title=region_title)
-            features_formatted = vendor["features"].format(region_title=region_title)
-            
-            block = f"""
+        block = f"""
         <!-- 업체 {idx}: {vendor['name']} -->
         <div class="vendor-card">
-            <img src="{vendor['image']}" alt="{region_title} {vendor['name']} 출장마사지" class="vendor-img">
+            <img src="{vendor['image']}" alt="{display_title} {vendor['name']} 출장마사지" class="vendor-img">
             <div class="vendor-body">
                 <div class="vendor-header">
                     <div>
@@ -154,26 +141,37 @@ def generate_sub_pages():
                 <a href="tel:{vendor['phone']}" class="call-btn">📞 전화 문의 : {vendor['phone']}</a>
             </div>
         </div>"""
-            vendor_html_blocks.append(block)
+        vendor_html_blocks.append(block)
 
-        vendors_rendered = "\n".join(vendor_html_blocks)
+    vendors_rendered = "\n".join(vendor_html_blocks)
 
-        html_code = f"""<!DOCTYPE html>
+    # 동 목록 클릭 링크 생성
+    dong_links = []
+    for d in dongs_data:
+        active_style = ' style="border-color:#d4af37; color:#d4af37; font-weight:bold;"' if d == current_dong else ''
+        dong_links.append(f'<a href="/{folder_name}/{d}.html" class="dong-tag"{active_style}>{d} 출장마사지</a>')
+    
+    dong_wrap_html = "\n                ".join(dong_links)
+    
+    # 상위 경로 뒤로가기 버튼
+    parent_link = f'/{folder_name}/' if is_dong else '/'
+    parent_text = '← 구/시 메인으로' if is_dong else '← 전체 홈으로'
+
+    return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{region_title} 출장마사지 & 24시 홈타이 테라피 - {SITE_NAME}</title>
-    <meta name="description" content="{region_title} 전 지역 신속 30분 방문 출장마사지 전문 {SITE_NAME}. 타이, 아로마, 스웨디시 1:1 맞춤 프리미엄 홈케어 예약.">
-    <meta name="keywords" content="{region_title} 출장마사지, {region_title} 홈타이, {region_title} 스웨디시, {dong_keywords}">
+    <title>{display_title} 출장마사지 & 24시 홈타이 테라피 - {SITE_NAME}</title>
+    <meta name="description" content="{display_title} 전 지역 신속 30분 방문 출장마사지 전문 {SITE_NAME}. 타이, 아로마, 스웨디시 1:1 맞춤 프리미엄 홈케어 예약.">
+    <meta name="keywords" content="{display_title} 출장마사지, {display_title} 홈타이, {display_title} 스웨디시, 24시 방문마사지">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{page_url}">
+    <link rel="canonical" href="{BASE_URL}/{folder_name}/{f'{current_dong}.html' if is_dong else ''}">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{region_title} 출장마사지 - {SITE_NAME}">
-    <meta property="og:description" content="{region_title} 전 지역 24시간 1:1 맞춤 출장마사지 및 프라이빗 힐링 케어">
+    <meta property="og:title" content="{display_title} 출장마사지 - {SITE_NAME}">
+    <meta property="og:description" content="{display_title} 전 지역 24시간 1:1 맞춤 출장마사지 및 프라이빗 힐링 케어">
     <meta property="og:image" content="{shuffled_vendors[0]['image']}">
-    <meta property="og:url" content="{page_url}">
 
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }}
@@ -203,38 +201,39 @@ def generate_sub_pages():
         .card {{ background: #161821; border: 1px solid #2a2d37; border-radius: 12px; padding: 20px; margin-top: 25px; }}
         .card h3 {{ color: #d4af37; font-size: 1.1rem; margin-bottom: 10px; border-left: 4px solid #d4af37; padding-left: 8px; }}
         .dong-wrap {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
-        .dong-tag {{ background: #1f2330; border: 1px solid #32384a; color: #e1e3e8; padding: 6px 12px; border-radius: 20px; font-size: 0.82rem; }}
+        .dong-tag {{ background: #1f2330; border: 1px solid #32384a; color: #e1e3e8; padding: 6px 12px; border-radius: 20px; font-size: 0.82rem; transition: 0.2s; }}
+        .dong-tag:hover {{ border-color: #d4af37; color: #d4af37; }}
         .back-btn {{ display: inline-block; background: #222634; color: #bbb; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; margin-top: 20px; }}
         footer {{ text-align: center; padding: 20px; font-size: 0.8rem; color: #777; border-top: 1px solid #2a2d37; margin-top: 30px; }}
     </style>
 </head>
 <body>
     <header>
-        <h1>{region_title} 출장마사지 <span>{SITE_NAME}</span></h1>
+        <h1>{display_title} 출장마사지 <span>{SITE_NAME}</span></h1>
     </header>
 
     <div class="hero">
-        <h2>{region_title} 전 지역 신속 방문 출장마사지</h2>
+        <h2>{display_title} 전 지역 신속 방문 출장마사지</h2>
         <p>고객님이 계신 편안한 공간으로 전문 테라피스트가 직접 찾아갑니다</p>
     </div>
 
     <div class="container">
         
-        <h2 class="section-title">{region_title} 추천 테라피 매장 안내</h2>
+        <h2 class="section-title">{display_title} 추천 테라피 매장 안내</h2>
 
 {vendors_rendered}
 
-        <!-- 세부 동 안내 카드 -->
+        <!-- 세부 동 바로가기 링크 카드 -->
         <div class="card">
-            <h3>{region_title} 출장마사지 세부 서비스 구역</h3>
-            <p>{region_title} 내 모든 동 및 인근 권역까지 30분 내 빠른 배정이 가능합니다.</p>
+            <h3>{display_title} 주변 세부 동별 안내 (클릭 시 이동)</h3>
+            <p>원하시는 동을 클릭하시면 해당 지역 전용 상세 안내 페이지로 이동합니다.</p>
             <div class="dong-wrap">
-                {dong_badges}
+                {dong_wrap_html}
             </div>
         </div>
 
         <div style="text-align: center;">
-            <a href="/" class="back-btn">← 메인 홈으로 돌아가기</a>
+            <a href="{parent_link}" class="back-btn">{parent_text}</a>
         </div>
     </div>
 
@@ -244,12 +243,31 @@ def generate_sub_pages():
 </body>
 </html>
 """
-        file_path = os.path.join(folder, "index.html")
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(html_code)
-        total_created += 1
 
-    print(f"🎉 총 {total_created}개 지역 페이지에 이미지 포함 + 랜덤 배치가 완료되었습니다!")
+def generate_all():
+    gu_count = 0
+    dong_count = 0
+
+    for folder, data in REGIONS.items():
+        os.makedirs(folder, exist_ok=True)
+        region_title = data["name"]
+        dongs = data["dongs"]
+
+        # 1. 구/시 메인 페이지 생성 (index.html)
+        gu_html = generate_html_template(region_title, folder, is_dong=False, dongs_data=dongs)
+        with open(os.path.join(folder, "index.html"), "w", encoding="utf-8") as f:
+            f.write(gu_html)
+        gu_count += 1
+
+        # 2. 각 동별 세부 페이지 생성 (동이름.html)
+        for dong in dongs:
+            dong_title = f"{region_title} {dong}"
+            dong_html = generate_html_template(dong_title, folder, is_dong=True, dongs_data=dongs, current_dong=dong)
+            with open(os.path.join(folder, f"{dong}.html"), "w", encoding="utf-8") as f:
+                f.write(dong_html)
+            dong_count += 1
+
+    print(f"🎉 [완료] {gu_count}개 시·구 페이지 및 {dong_count}개 세부 동 페이지가 모두 생성되었습니다!")
 
 if __name__ == "__main__":
-    generate_sub_pages()
+    generate_all()
