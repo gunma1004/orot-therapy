@@ -3,524 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>블레스바디 - 프리미엄 홈 바디케어 & 24시 방문 힐링 테라피</title>
-    
-    <!-- 네이버/구글 검색엔진 소유확인 메타태그 (새 네이버 키 적용 완료) -->
-    <meta name="naver-site-verification" content="542a05bb30d128f05b8c2dc97a1a63f002c3f66f" />
-    <meta name="google-site-verification" content="Fhw2xaTWUyknnUdX8K0AMxP5ChW30jU7Al4hkfxy_Bk" />
-
-    <!-- 검색엔진 최적화 메타태그 (출장마사지 키워드 제외) -->
-    <meta name="description" content="블레스바디는 서울·경기·인천 전 지역 24시간 1:1 맞춤 프리미엄 홈 바디케어 및 프라이빗 힐링 테라피 서비스를 제공합니다.">
-    <meta name="keywords" content="블레스바디, Bliss Body, 홈케어, 바디케어, 프리미엄 힐링, 스웨디시 테라피, 아로마 케어, 서울 홈케어, 경기 바디케어, 인천 홈케어, 24시 방문 테라피">
+    <title>수도권 24시 방문 홈케어 & 1:1 프라이빗 바디 테라피 - 블레스바디</title>
+    <meta name="description" content="서울, 경기, 인천 전 지역 신속 1:1 방문 홈케어 및 안심 힐링 에스테틱 전문 블레스바디. 24시간 언제나 편안한 공간에서 맞춤 바디 테라피를 누려보세요.">
+    <meta name="keywords" content="수도권 방문 홈케어, 24시 홈타이 테라피, 스웨디시 힐링, 프라이빗 에스테틱, 바디 컨디셔닝">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://blissbody.netlify.app/">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="블레스바디 (Bliss Body) - 프리미엄 홈 바디케어 안내">
-    <meta property="og:description" content="지친 일상을 채우는 프라이빗 힐링 서비스, 서울·경기·인천 전 지역 맞춤 방문 테라피">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://blissbody.netlify.app/">
 
-    <!-- 구조화된 데이터 (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "블레스바디 (Bliss Body)",
-      "description": "서울, 경기, 인천 전 지역 24시간 프라이빗 홈 바디케어 및 힐링 테라피 안내",
-      "url": "https://blissbody.netlify.app"
-    }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', -apple-system, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
         body { background-color: #0f1117; color: #e1e3e8; line-height: 1.6; padding-bottom: 40px; }
         a { text-decoration: none; color: inherit; }
-
-        header { 
-            background: #161821; 
-            padding: 18px 20px; 
-            text-align: center; 
-            border-bottom: 2px solid #d4af37; 
-            position: sticky; 
-            top: 0; 
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-        }
-        header h1 { font-size: 1.35rem; color: #ffffff; font-weight: 700; }
+        header { background: #161821; padding: 18px 20px; text-align: center; border-bottom: 2px solid #d4af37; position: sticky; top: 0; z-index: 100; }
+        header h1 { font-size: 1.3rem; color: #ffffff; }
         header h1 span { color: #d4af37; }
-
-        .hero-banner {
-            position: relative;
-            background: linear-gradient(rgba(15, 17, 23, 0.75), rgba(15, 17, 23, 0.88)), 
-                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            padding: 55px 20px;
-            text-align: center;
-            border-bottom: 1px solid #2a2d37;
-        }
-        .hero-banner h2 { font-size: 1.65rem; color: #fff; margin-bottom: 12px; font-weight: 700; }
-        .hero-banner p { font-size: 0.95rem; color: #d4af37; font-weight: 500; max-width: 600px; margin: 0 auto; }
-
-        .notice-banner { 
-            background: #1a1d27; 
-            border-left: 4px solid #d4af37; 
-            padding: 14px 20px; 
-            margin: 25px auto 10px; 
-            max-width: 900px; 
-            width: 92%; 
-            border-radius: 6px; 
-            font-size: 0.9rem; 
-            color: #d1d5db;
-        }
-
-        .container { max-width: 900px; margin: 0 auto; padding: 0 15px; }
-        .section-title { 
-            font-size: 1.25rem; 
-            color: #ffffff; 
-            margin: 35px 0 18px 0; 
-            border-left: 4px solid #d4af37; 
-            padding-left: 10px; 
-            font-weight: 700;
-        }
-
-        .vendor-card { 
-            background: #161821; 
-            border: 1px solid #2a2d37; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            margin-bottom: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
-            transition: border-color 0.3s;
-        }
-        .vendor-card:hover { border-color: #d4af37; }
-
-        .vendor-img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .vendor-body { padding: 20px; }
-        .vendor-header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            border-bottom: 1px solid #2a2d37; 
-            padding-bottom: 12px; 
-            margin-bottom: 15px; 
-            flex-wrap: wrap; 
-            gap: 8px; 
-        }
-        .vendor-badge { background: #d4af37; color: #161821; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; }
-        .vendor-title { font-size: 1.25rem; color: #ffffff; font-weight: bold; }
-        .vendor-tagline { color: #2ecc71; font-size: 0.88rem; font-weight: 600; width: 100%; margin-top: 4px; }
-
-        .vendor-info { margin-bottom: 18px; }
-        .info-row { display: flex; margin-bottom: 8px; font-size: 0.92rem; }
-        .info-label { width: 95px; color: #d4af37; font-weight: bold; flex-shrink: 0; }
-        .info-content { color: #bbbfca; }
-
-        .vendor-call-btn { 
-            display: block; 
-            text-align: center; 
-            background: linear-gradient(135deg, #d4af37, #aa820a); 
-            color: #111; 
-            font-weight: bold; 
-            padding: 13px; 
-            border-radius: 8px; 
-            font-size: 1rem; 
-            box-shadow: 0 3px 8px rgba(212, 175, 55, 0.3);
-        }
-
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        .review-card {
-            background: #161821;
-            border: 1px solid #2a2d37;
-            padding: 18px;
-            border-radius: 10px;
-            font-size: 0.88rem;
-        }
-        .review-card p { color: #d1d5db; margin-bottom: 10px; line-height: 1.5; }
-        .review-card .author { color: #d4af37; font-size: 0.8rem; font-weight: bold; }
-
-        .chat-panel {
-            background: #161821;
-            border: 1px solid #2a2d37;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 35px;
-        }
-        .chat-panel h3 { color: #d4af37; font-size: 1.05rem; margin-bottom: 15px; border-bottom: 1px solid #2a2d37; padding-bottom: 8px; }
-        .chat-msg { margin-bottom: 12px; display: flex; flex-direction: column; }
-        .chat-left {
-            align-self: flex-start;
-            background: #222634;
-            color: #e1e3e8;
-            padding: 10px 14px;
-            border-radius: 12px 12px 12px 2px;
-            font-size: 0.88rem;
-            max-width: 85%;
-        }
-        .chat-right {
-            align-self: flex-end;
-            background: #d4af37;
-            color: #111;
-            font-weight: 500;
-            padding: 10px 14px;
-            border-radius: 12px 12px 2px 12px;
-            font-size: 0.88rem;
-            max-width: 85%;
-            margin-top: 4px;
-        }
-
-        .area-box { background: #161820; border: 1px solid #2a2d37; border-radius: 12px; padding: 22px; margin: 35px 0; }
-        .area-box h3 { color: #d4af37; font-size: 1.1rem; margin-bottom: 15px; }
-        .region-subtitle { font-size: 0.95rem; color: #fff; font-weight: bold; margin: 15px 0 10px; border-bottom: 1px solid #2a2d37; padding-bottom: 4px; }
-        .area-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 12px;
-        }
-        .area-item {
-            background: #1a1c23;
-            border: 1px solid #2a2d37;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #d1d5db;
-        }
-        .area-item .gu-link { color: #d4af37; font-weight: bold; font-size: 0.95rem; display: block; margin-bottom: 6px; text-decoration: underline; }
-        .area-item .dong-list { font-size: 0.8rem; color: #a0a5b1; line-height: 1.5; }
-        .area-item .dong-list a { color: #cccccc; margin-right: 3px; }
-        .area-item .dong-list a:hover { color: #d4af37; text-decoration: underline; }
-
-        footer { text-align: center; padding: 25px 20px; font-size: 0.8rem; color: #7f8c8d; border-top: 1px solid #2a2d37; margin-top: 20px; }
+        .hero { background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 50px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }
+        .hero h2 { font-size: 1.6rem; color: #fff; margin-bottom: 10px; }
+        .hero p { font-size: 0.95rem; color: #d4af37; }
+        .container { max-width: 850px; margin: 0 auto; padding: 25px 15px; }
+        .card { background: #161821; border: 1px solid #2a2d37; border-radius: 12px; padding: 22px; margin-top: 20px; }
+        .card h3 { color: #d4af37; font-size: 1.15rem; margin-bottom: 12px; border-left: 4px solid #d4af37; padding-left: 10px; }
+        .dong-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .dong-tag { background: #1f2330; border: 1px solid #32384a; color: #e1e3e8; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; transition: 0.2s; }
+        .dong-tag:hover { border-color: #d4af37; color: #d4af37; }
+        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #777; border-top: 1px solid #2a2d37; margin-top: 40px; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>블레스바디 <span>프리미엄 24시 홈 바디케어</span></h1>
+        <h1>수도권 프리미엄 <span>블레스바디 방문 홈케어</span></h1>
     </header>
 
-    <div class="hero-banner">
-        <h2>지친 일상을 채우는 프라이빗 바디케어</h2>
-        <p>서울 · 경기 · 인천 전 지역 전문 테라피스트 빠른 1:1 힐링 케어</p>
-    </div>
-
-    <div class="notice-banner">
-        <strong>[이용 안내]</strong> 서울·경기·인천 전 지역 30분 내 원활한 방문 지원. 100% 예약제로 운영되며 사전 상담을 통해 정직하고 투명한 홈케어 서비스를 약속드립니다.
+    <div class="hero">
+        <h2>수도권 24시 프라이빗 1:1 방문 홈케어</h2>
+        <p>서울 · 경기 · 인천 어디서나 고객님이 계신 곳으로 전문 테라피스트가 찾아갑니다</p>
     </div>
 
     <div class="container">
-        
-        <h2 class="section-title">블레스바디 추천 프리미엄 케어 매장 TOP 5</h2>
-
-        <!-- 업체 1: 미인클럽테라피 -->
-        <div class="vendor-card">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="미인클럽테라피" class="vendor-img">
-            <div class="vendor-body">
-                <div class="vendor-header">
-                    <div>
-                        <span class="vendor-badge">추천 01</span>
-                        <span class="vendor-title">미인클럽테라피</span>
-                    </div>
-                    <div class="vendor-tagline">★ 강남 / 서초 / 송파 중심 20분 신속 도착 지원</div>
-                </div>
-                <div class="vendor-info">
-                    <div class="info-row">
-                        <div class="info-label">제공 코스</div>
-                        <div class="info-content">시그니처 바디케어 (60분/90분), 프리미엄 아로마 (60분/90분/120분)</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">매장 특징</div>
-                        <div class="info-content">전문 자격 테라피스트 구성, 최고급 천연 오일 사용, 맞춤 릴렉싱 케어</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">주요 방문지</div>
-                        <div class="info-content">강남구, 서초구, 송파구, 강동구 및 서울 전역</div>
-                    </div>
-                </div>
-                <a href="tel:0507-1280-3193" class="vendor-call-btn">📞 전화 문의 : 0507-1280-3193</a>
+        <div class="card">
+            <h3>서비스 제공 지역 안내</h3>
+            <p>원하시는 지역을 선택하시면 해당 구·시의 상세 안내 페이지로 이동합니다.</p>
+            <div class="dong-wrap">
+                <a href="/gangnam/" class="dong-tag">서울 강남구 홈케어</a>
+                <a href="/gangdong/" class="dong-tag">서울 강동구 홈케어</a>
+                <a href="/gangbuk/" class="dong-tag">서울 강북구 홈케어</a>
+                <a href="/gangseo/" class="dong-tag">서울 강서구 홈케어</a>
+                <a href="/gwanak/" class="dong-tag">서울 관악구 홈케어</a>
+                <a href="/gwangjin/" class="dong-tag">서울 광진구 홈케어</a>
+                <a href="/guro/" class="dong-tag">서울 구로구 홈케어</a>
+                <a href="/geumcheon/" class="dong-tag">서울 금천구 홈케어</a>
+                <a href="/nowon/" class="dong-tag">서울 노원구 홈케어</a>
+                <a href="/dobong/" class="dong-tag">서울 도봉구 홈케어</a>
+                <a href="/dongdaemun/" class="dong-tag">서울 동대문구 홈케어</a>
+                <a href="/dongjak/" class="dong-tag">서울 동작구 홈케어</a>
+                <a href="/mapo/" class="dong-tag">서울 마포구 홈케어</a>
+                <a href="/seodaemun/" class="dong-tag">서울 서대문구 홈케어</a>
+                <a href="/seocho/" class="dong-tag">서울 서초구 홈케어</a>
+                <a href="/seongdong/" class="dong-tag">서울 성동구 홈케어</a>
+                <a href="/seongbuk/" class="dong-tag">서울 성북구 홈케어</a>
+                <a href="/songpa/" class="dong-tag">서울 송파구 홈케어</a>
+                <a href="/yangcheon/" class="dong-tag">서울 양천구 홈케어</a>
+                <a href="/yeongdeungpo/" class="dong-tag">서울 영등포구 홈케어</a>
+                <a href="/yongsan/" class="dong-tag">서울 용산구 홈케어</a>
+                <a href="/eunpyeong/" class="dong-tag">서울 은평구 홈케어</a>
+                <a href="/jongno/" class="dong-tag">서울 종로구 홈케어</a>
+                <a href="/junggu/" class="dong-tag">서울 중구 홈케어</a>
+                <a href="/jungnang/" class="dong-tag">서울 중랑구 홈케어</a>
+                <a href="/suwon/" class="dong-tag">경기 수원시 홈케어</a>
+                <a href="/seongnam/" class="dong-tag">경기 성남시 홈케어</a>
+                <a href="/goyang/" class="dong-tag">경기 고양시 홈케어</a>
+                <a href="/yongin/" class="dong-tag">경기 용인시 홈케어</a>
+                <a href="/bucheon/" class="dong-tag">경기 부천시 홈케어</a>
+                <a href="/ansan/" class="dong-tag">경기 안산시 홈케어</a>
+                <a href="/anyang/" class="dong-tag">경기 안양시 홈케어</a>
+                <a href="/namyangju/" class="dong-tag">경기 남양주시 홈케어</a>
+                <a href="/hwaseong/" class="dong-tag">경기 화성시 홈케어</a>
+                <a href="/pyeongtaek/" class="dong-tag">경기 평택시 홈케어</a>
+                <a href="/uijeongbu/" class="dong-tag">경기 의정부시 홈케어</a>
+                <a href="/siheung/" class="dong-tag">경기 시흥시 홈케어</a>
+                <a href="/paju/" class="dong-tag">경기 파주시 홈케어</a>
+                <a href="/gimpo/" class="dong-tag">경기 김포시 홈케어</a>
+                <a href="/gwangmyeong/" class="dong-tag">경기 광명시 홈케어</a>
+                <a href="/gwangju-gy/" class="dong-tag">경기 광주시 홈케어</a>
+                <a href="/gunpo/" class="dong-tag">경기 군포시 홈케어</a>
+                <a href="/hanam/" class="dong-tag">경기 하남시 홈케어</a>
+                <a href="/osan/" class="dong-tag">경기 오산시 홈케어</a>
+                <a href="/icheon/" class="dong-tag">경기 이천시 홈케어</a>
+                <a href="/bupyeong/" class="dong-tag">인천 부평구 홈케어</a>
+                <a href="/namdong/" class="dong-tag">인천 남동구 홈케어</a>
+                <a href="/incheon-seo/" class="dong-tag">인천 서구 홈케어</a>
+                <a href="/yeonsu/" class="dong-tag">인천 연수구 홈케어</a>
+                <a href="/michuhol/" class="dong-tag">인천 미추홀구 홈케어</a>
+                <a href="/incheon-jung/" class="dong-tag">인천 중구 홈케어</a>
+                <a href="/gyeyang/" class="dong-tag">인천 계양구 홈케어</a>
+                <a href="/incheon-dong/" class="dong-tag">인천 동구 홈케어</a>
             </div>
         </div>
-
-        <!-- 업체 2: 혼혈스웨디시테라피 -->
-        <div class="vendor-card">
-            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="혼혈스웨디시테라피" class="vendor-img">
-            <div class="vendor-body">
-                <div class="vendor-header">
-                    <div>
-                        <span class="vendor-badge">추천 02</span>
-                        <span class="vendor-title">혼혈스웨디시테라피</span>
-                    </div>
-                    <div class="vendor-tagline">★ 감성적이고 부드러운 스페셜 림프 & 스웨디시 케어</div>
-                </div>
-                <div class="vendor-info">
-                    <div class="info-row">
-                        <div class="info-label">제공 코스</div>
-                        <div class="info-content">스웨디시 딥티슈 케어 (60분/90분/120분), 전신 림프 순환 케어</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">매장 특징</div>
-                        <div class="info-content">24시간 운영, 1:1 맞춤 프라이빗 힐링 테라피, 철저한 위생 관리</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">주요 방문지</div>
-                        <div class="info-content">마포구, 용산구, 종로구, 중구, 영등포구 및 수도권 일대</div>
-                    </div>
-                </div>
-                <a href="tel:0507-1280-3334" class="vendor-call-btn">📞 전화 문의 : 0507-1280-3334</a>
-            </div>
-        </div>
-
-        <!-- 업체 3: 한국골든테라피 -->
-        <div class="vendor-card">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="한국골든테라피" class="vendor-img">
-            <div class="vendor-body">
-                <div class="vendor-header">
-                    <div>
-                        <span class="vendor-badge">추천 03</span>
-                        <span class="vendor-title">한국골든테라피</span>
-                    </div>
-                    <div class="vendor-tagline">★ 한국인 베테랑 전문 테라피스트의 품격 있는 골든 케어</div>
-                </div>
-                <div class="vendor-info">
-                    <div class="info-row">
-                        <div class="info-label">제공 코스</div>
-                        <div class="info-content">VIP 골든 힐링 코스, 맞춤형 근육 이완 케어, 센슈얼 아로마</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">매장 특징</div>
-                        <div class="info-content">오랜 경력의 실력파 한국인 관리사 항시 대기, 정찰제 요금 시스템</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">주요 방문지</div>
-                        <div class="info-content">서울 전 지역 및 경기 수원, 성남(분당), 고양(일산), 부천 등</div>
-                    </div>
-                </div>
-                <a href="tel:0507-1280-3361" class="vendor-call-btn">📞 전화 문의 : 0507-1280-3361</a>
-            </div>
-        </div>
-
-        <!-- 업체 4: 기쁨조테라피 -->
-        <div class="vendor-card">
-            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80" alt="기쁨조테라피" class="vendor-img">
-            <div class="vendor-body">
-                <div class="vendor-header">
-                    <div>
-                        <span class="vendor-badge">추천 04</span>
-                        <span class="vendor-title">기쁨조테라피</span>
-                    </div>
-                    <div class="vendor-tagline">★ 피로와 스트레스를 단번에 날려주는 활력 충전 힐링 케어</div>
-                </div>
-                <div class="vendor-info">
-                    <div class="info-row">
-                        <div class="info-label">제공 코스</div>
-                        <div class="info-content">스페셜 콤보 케어, 호텔식 VIP 1:1 집중 피로회복 관리</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">매장 특징</div>
-                        <div class="info-content">수도권 전역 빠른 출동 시스템, 고객 맞춤형 압 조절 테라피</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">주요 방문지</div>
-                        <div class="info-content">서울 서남부/동남부 및 경기 용인, 안양, 평택, 화성(동탄)</div>
-                    </div>
-                </div>
-                <a href="tel:0507-1280-3223" class="vendor-call-btn">📞 전화 문의 : 0507-1280-3223</a>
-            </div>
-        </div>
-
-        <!-- 업체 5: 한국미인테라피 -->
-        <div class="vendor-card">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="한국미인테라피" class="vendor-img">
-            <div class="vendor-body">
-                <div class="vendor-header">
-                    <div>
-                        <span class="vendor-badge">추천 05</span>
-                        <span class="vendor-title">한국미인테라피</span>
-                    </div>
-                    <div class="vendor-tagline">★ 친절하고 섬세한 힐링 테라피, 인천/경기/서울 전역 대기</div>
-                </div>
-                <div class="vendor-info">
-                    <div class="info-row">
-                        <div class="info-label">제공 코스</div>
-                        <div class="info-content">클래식 테라피, 습식 프리미엄 아로마, 전신 스페셜 케어</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">매장 특징</div>
-                        <div class="info-content">합리적이고 투명한 정찰제, 정성 가득한 일대일 고객 맞춤 상담</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">주요 방문지</div>
-                        <div class="info-content">인천(부평, 송도, 청라, 구월) 및 서울, 경기 서부권 전 지역</div>
-                    </div>
-                </div>
-                <a href="tel:0507-1280-3303" class="vendor-call-btn">📞 전화 문의 : 0507-1280-3303</a>
-            </div>
-        </div>
-
-        <!-- 이용 후기 영역 -->
-        <h2 class="section-title">생생한 고객 이용 후기</h2>
-        <div class="review-grid">
-            <div class="review-card">
-                <p>"퇴근 후에 집에서 편하게 예약했는데 약속된 시간에 맞춰 와주셔서 정말 개운하게 피로 풀었습니다."</p>
-                <div class="author">- 강남구 역삼동 고객님</div>
-            </div>
-            <div class="review-card">
-                <p>"아로마 코스로 진행했는데 향도 좋고 너무 친절하셔서 정기적으로 이용하려고 합니다."</p>
-                <div class="author">- 마포구 합정동 고객님</div>
-            </div>
-            <div class="review-card">
-                <p>"야근 끝나고 늦은 시간에 연락드렸는데도 친절히 응대해주셔서 편안하게 힐링했습니다."</p>
-                <div class="author">- 성남시 분당구 고객님</div>
-            </div>
-        </div>
-
-        <!-- 실제 문의 대화 내역 (Chat Panel) -->
-        <h2 class="section-title">실제 상담 문의 내역 예시</h2>
-        <div class="chat-panel">
-            <h3>💬 블레스바디 실시간 질문 & 상담 답변</h3>
-            <div class="chat-msg">
-                <div class="chat-left">Q. 오늘 저녁 9시쯤 강남 위치인데 당일 바로 예약이 가능한가요?</div>
-                <div class="chat-right">네 고객님! 희망하시는 시간과 계신 지역 말씀해주시면 신속하게 담당 테라피스트를 배정해 드립니다.</div>
-            </div>
-            <div class="chat-msg">
-                <div class="chat-left">Q. 바디 테라피와 아로마 케어의 차이가 무엇인가요?</div>
-                <div class="chat-right">바디 테라피는 스트레칭과 지압 중심의 케어이며, 아로마는 천연 오일을 도포하여 부드럽게 림프 순환을 돕는 프로그램입니다.</div>
-            </div>
-            <div class="chat-msg">
-                <div class="chat-left">Q. 결제 방식은 어떻게 진행되나요?</div>
-                <div class="chat-right">블레스바디 안내 매장들은 안심하고 이용하실 수 있도록 확인 후 진행되는 후불제 정찰 시스템을 원칙으로 합니다.</div>
-            </div>
-        </div>
-
-        <!-- 서울/경기/인천 지역 전용 페이지 안내 -->
-        <div class="area-box">
-            <h3>📍 블레스바디 서울 · 경기 · 인천 지역별 전용 안내</h3>
-
-            <div class="region-subtitle">■ 서울특별시 (25개 구)</div>
-            <div class="area-grid">
-                <div class="area-item">
-                    <a href="/gangnam/" class="gu-link">📍 강남구</a>
-                    <div class="dong-list">
-                        <a href="/gangnam/역삼동.html">역삼</a>, <a href="/gangnam/논현동.html">논현</a>, <a href="/gangnam/압구정동.html">압구정</a>, <a href="/gangnam/청담동.html">청담</a>, <a href="/gangnam/삼성동.html">삼성</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/seocho/" class="gu-link">📍 서초구</a>
-                    <div class="dong-list">
-                        <a href="/seocho/서초동.html">서초동</a>, <a href="/seocho/반포동.html">반포동</a>, <a href="/seocho/방배동.html">방배동</a>, <a href="/seocho/양재동.html">양재동</a>, <a href="/seocho/잠원동.html">잠원동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/songpa/" class="gu-link">📍 송파구</a>
-                    <div class="dong-list">
-                        <a href="/songpa/잠실동.html">잠실동</a>, <a href="/songpa/가락동.html">가락동</a>, <a href="/songpa/문정동.html">문정동</a>, <a href="/songpa/방이동.html">방이동</a>, <a href="/songpa/오금동.html">오금동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/mapo/" class="gu-link">📍 마포구</a>
-                    <div class="dong-list">
-                        <a href="/mapo/서교동.html">홍대</a>, <a href="/mapo/합정동.html">합정</a>, <a href="/mapo/상암동.html">상암동</a>, <a href="/mapo/공덕동.html">공덕동</a>, <a href="/mapo/연남동.html">연남동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/yongsan/" class="gu-link">📍 용산구</a>
-                    <div class="dong-list">
-                        <a href="/yongsan/이태원동.html">이태원</a>, <a href="/yongsan/한남동.html">한남동</a>, <a href="/yongsan/한강로동.html">용산역</a>, <a href="/yongsan/이촌동.html">이촌동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/yeongdeungpo/" class="gu-link">📍 영등포구</a>
-                    <div class="dong-list">
-                        <a href="/yeongdeungpo/여의도동.html">여의도</a>, <a href="/yeongdeungpo/당산동.html">당산동</a>, <a href="/yeongdeungpo/문래동.html">문래동</a>, <a href="/yeongdeungpo/신길동.html">신길동</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="region-subtitle">■ 경기도 주요 지역</div>
-            <div class="area-grid">
-                <div class="area-item">
-                    <a href="/suwon/" class="gu-link">📍 수원시</a>
-                    <div class="dong-list">
-                        <a href="/suwon/인계동.html">인계동</a>, <a href="/suwon/광교동.html">광교동</a>, <a href="/suwon/영통동.html">영통동</a>, <a href="/suwon/매탄동.html">매탄동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/seongnam/" class="gu-link">📍 성남시</a>
-                    <div class="dong-list">
-                        <a href="/seongnam/서현동.html">서현동</a>, <a href="/seongnam/판교동.html">판교</a>, <a href="/seongnam/정자동.html">정자동</a>, <a href="/seongnam/야탑동.html">야탑동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/goyang/" class="gu-link">📍 고양시</a>
-                    <div class="dong-list">
-                        <a href="/goyang/백석동.html">백석동</a>, <a href="/goyang/마두동.html">마두동</a>, <a href="/goyang/주엽동.html">주엽동</a>, <a href="/goyang/화정동.html">화정동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/bucheon/" class="gu-link">📍 부천시</a>
-                    <div class="dong-list">
-                        <a href="/bucheon/중동.html">중동</a>, <a href="/bucheon/상동.html">상동</a>, <a href="/bucheon/소사본동.html">소사본동</a>, <a href="/bucheon/괴안동.html">괴안동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/yongin/" class="gu-link">📍 용인시</a>
-                    <div class="dong-list">
-                        <a href="/yongin/풍덕천동.html">풍덕천</a>, <a href="/yongin/죽전동.html">죽전동</a>, <a href="/yongin/동백동.html">동백동</a>, <a href="/yongin/보정동.html">보정동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/hwaseong/" class="gu-link">📍 화성시</a>
-                    <div class="dong-list">
-                        <a href="/hwaseong/동탄동.html">동탄동</a>, <a href="/hwaseong/반송동.html">반송동</a>, <a href="/hwaseong/향남읍.html">향남</a>, <a href="/hwaseong/병점동.html">병점동</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="region-subtitle">■ 인천광역시 주요 지역</div>
-            <div class="area-grid">
-                <div class="area-item">
-                    <a href="/bupyeong/" class="gu-link">📍 부평구</a>
-                    <div class="dong-list">
-                        <a href="/bupyeong/부평동.html">부평동</a>, <a href="/bupyeong/삼산동.html">삼산동</a>, <a href="/bupyeong/청천동.html">청천동</a>, <a href="/bupyeong/갈산동.html">갈산동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/namdong/" class="gu-link">📍 남동구</a>
-                    <div class="dong-list">
-                        <a href="/namdong/구월동.html">구월동</a>, <a href="/namdong/논현동.html">논현동</a>, <a href="/namdong/간석동.html">간석동</a>, <a href="/namdong/만수동.html">만수동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/yeonsu/" class="gu-link">📍 연수구</a>
-                    <div class="dong-list">
-                        <a href="/yeonsu/송도동.html">송도동</a>, <a href="/yeonsu/연수동.html">연수동</a>, <a href="/yeonsu/동춘동.html">동춘동</a>, <a href="/yeonsu/옥련동.html">옥련동</a>
-                    </div>
-                </div>
-                <div class="area-item">
-                    <a href="/incheon-seo/" class="gu-link">📍 서구</a>
-                    <div class="dong-list">
-                        <a href="/incheon-seo/청라동.html">청라동</a>, <a href="/incheon-seo/검단동.html">검단</a>, <a href="/incheon-seo/가정동.html">가정동</a>, <a href="/incheon-seo/검암동.html">검암동</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <footer>
-        <p>© 블레스바디 (Bliss Body). All rights reserved.</p>
+        <p>© 블레스바디. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
