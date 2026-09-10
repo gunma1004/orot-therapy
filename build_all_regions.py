@@ -215,7 +215,7 @@ VENDORS = [
     {
         "name": "미인클럽테라피",
         "phone": "0507-1280-3193",
-        "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+        "image": "/images/shop1.jpg",  # 1번 샵 이미지
         "tagline": "★ {region_title} 전 지역 30분 내 신속 방문 케어 지원",
         "courses": "시그니처 바디케어, 프리미엄 아로마 힐링 코스",
         "features": "전문 자격 관리사, 천연 에센셜 오일, 맞춤 릴렉싱 컨디셔닝"
@@ -223,15 +223,15 @@ VENDORS = [
     {
         "name": "퀸즈홈테라피",
         "phone": "0507-1280-3334",
-        "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-        "tagline": "★ 감성적이고 부드러운 스페셜 림프 & 프라이빗 홈케어",
+        "image": "/images/shop2.jpg",  # 2번 샵 이미지
+        "tagline": "★ 감성적이고 부드러운 스페셜 림프 & 스웨디시 케어",
         "courses": "스웨디시 딥티슈 케어, 전신 림프 순환 프로그램",
         "features": "24시간 운영, 1:1 맞춤 프라이빗 테라피, 철저한 소독 관리"
     },
     {
         "name": "한국골든테라피",
         "phone": "0507-1280-3361",
-        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+        "image": "/images/shop3.jpg",  # 3번 샵 이미지
         "tagline": "★ 실력파 한국인 전문 테라피스트의 품격 있는 골든 케어",
         "courses": "VIP 골든 힐링 코스, 맞춤형 근육 이완 케어, 센슈얼 아로마",
         "features": "베테랑 한국인 관리사 항시 대기, 투명한 정찰제 시스템"
@@ -239,7 +239,7 @@ VENDORS = [
     {
         "name": "기쁨조테라피",
         "phone": "0507-1280-3223",
-        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80",
+        "image": "/images/shop4.jpg",  # 4번 샵 이미지
         "tagline": "★ 하루의 피로와 스트레스를 풀어주는 활력 집중 케어",
         "courses": "스페셜 콤보 힐링 케어, 호텔식 VIP 1:1 집중 관리",
         "features": "{region_title} 신속 출동, 고객 맞춤형 압 조절 및 피로회복"
@@ -247,7 +247,7 @@ VENDORS = [
     {
         "name": "한국미인테라피",
         "phone": "0507-1280-3303",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
+        "image": "/images/shop5.jpg",  # 5번 샵 이미지
         "tagline": "★ 친절하고 섬세한 힐링 테라피, 안심 후불제 운영",
         "courses": "클래식 테라피, 습식 프리미엄 아로마, 전신 스페셜 코스",
         "features": "합리적이고 투명한 요금 구성, 정성 가득한 일대일 고객 응대"
@@ -392,7 +392,7 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
         header {{ background: #161821; padding: 18px 20px; text-align: center; border-bottom: 2px solid #d4af37; position: sticky; top: 0; z-index: 100; }}
         header h1 {{ font-size: 1.3rem; color: #ffffff; }}
         header h1 span {{ color: #d4af37; }}
-        .hero {{ background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 45px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }}
+        .hero {{ background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('/images/banner.jpg') center/cover; padding: 45px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }}
         .hero h2 {{ font-size: 1.5rem; color: #fff; margin-bottom: 8px; }}
         .hero p {{ font-size: 0.92rem; color: #d4af37; }}
         .container {{ max-width: 850px; margin: 0 auto; padding: 20px 15px; }}
