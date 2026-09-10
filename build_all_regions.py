@@ -354,7 +354,7 @@ REGIONS = {
 }
 
 def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], current_dong=""):
-    """구/시 및 동별 페이지 생성 (새로고침 시 자바스크립트로 샵 랜덤 셔플 적용)"""
+    """구/시 및 동별 페이지 생성 (네이버 소유확인 메타 태그 및 샵 랜덤 셔플 적용)"""
     tpl = get_seo_template(display_title)
     
     vendor_html_blocks = []
@@ -409,6 +409,7 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
     <title>{tpl['title']}</title>
     <meta name="description" content="{tpl['desc']}">
     <meta name="keywords" content="{display_title} 출장 홈케어, {display_title} 홈타이 테라피, {display_title} 스웨디시, 24시 방문 힐링">
+    <meta name="naver-site-verification" content="4c1b28c8afde60f71658ebff5bfef66630106011" />
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{canonical_url}">
     
@@ -528,6 +529,7 @@ def generate_clean_root_index():
     <title>수도권 24시 방문 홈케어 & 1:1 프라이빗 바디 테라피 - {SITE_NAME}</title>
     <meta name="description" content="서울, 경기, 인천 전 지역 신속 1:1 방문 홈케어 및 안심 힐링 에스테틱 전문 {SITE_NAME}. 24시간 언제나 편안한 공간에서 맞춤 바디 테라피를 누려보세요.">
     <meta name="keywords" content="수도권 방문 홈케어, 24시 홈타이 테라피, 스웨디시 힐링, 프라이빗 에스테틱, 바디 컨디셔닝">
+    <meta name="naver-site-verification" content="4c1b28c8afde60f71658ebff5bfef66630106011" />
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{BASE_URL}/">
 
