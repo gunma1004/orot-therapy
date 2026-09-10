@@ -12,210 +12,210 @@ def get_seo_template(region_title):
             "title": f"{region_title} 출장 1:1 방문 홈케어 마사지 & 테라피 - {SITE_NAME}",
             "desc": f"{region_title} 출장 전문 1:1 방문 홈케어 마사지 안내. {SITE_NAME}의 프라이빗 맞춤 테라피로 편안한 힐링을 경험해보세요.",
             "h1_sub": "방문 홈케어 마사지",
-            "hero_h2": f"{region_title} 출장 1:1 방문 홈케어 테라피",
+            "hero_h2": f"{region_title} 출장 1:1 방문 홈케어 마사지",
             "hero_p": "고객님이 계신 편안한 공간으로 전문 테라피스트가 직접 찾아갑니다",
-            "section_h2": f"{region_title} 추천 1:1 방문 홈케어 테라피 안내",
-            "tag_suffix": "홈케어 테라피"
+            "section_h2": f"{region_title} 추천 1:1 방문 홈케어 마사지 안내",
+            "tag_suffix": "홈케어 마사지"
         },
         # 2. 100% 건전 힐링
         {
             "title": f"{region_title} 출장 100% 건전 힐링 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 100% 건전 힐링 타이 마사지 추천. {SITE_NAME}의 품격 있는 바디 릴렉싱 케어를 안심하고 예약하세요.",
             "h1_sub": "건전 힐링 마사지",
-            "hero_h2": f"{region_title} 출장 안심 건전 힐링 테라피",
+            "hero_h2": f"{region_title} 출장 안심 건전 힐링 마사지",
             "hero_p": "정통 테라피스트의 정성스러운 케어로 지친 심신에 활력을 불어넣습니다",
-            "section_h2": f"{region_title} 안심 건전 힐링 바디 테라피 매장",
-            "tag_suffix": "건전 테라피"
+            "section_h2": f"{region_title} 안심 건전 힐링 바디 마사지 매장",
+            "tag_suffix": "건전 마사지"
         },
         # 3. 상체 림프 순환 케어
         {
             "title": f"{region_title} 출장 상체 림프 순환 케어 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 상체 림프 순환 및 가슴 바디 케어 마사지. 전문 테라피스트의 손길로 뭉친 근육을 부드럽게 이완해 드립니다.",
             "h1_sub": "상체 림프 마사지",
-            "hero_h2": f"{region_title} 출장 상체 림프 순환 바디 케어",
+            "hero_h2": f"{region_title} 출장 상체 림프 순환 바디 마사지",
             "hero_p": "섬세한 림프 순환 케어로 무거운 몸을 한결 가볍고 상쾌하게",
-            "section_h2": f"{region_title} 상체 림프 & 가슴 바디 릴렉싱 프로그램",
-            "tag_suffix": "림프 바디케어"
+            "section_h2": f"{region_title} 상체 림프 & 가슴 바디 릴렉싱 마사지",
+            "tag_suffix": "림프 마사지"
         },
         # 4. 프리미엄 아로마 오일
         {
             "title": f"{region_title} 출장 프리미엄 아로마 오일 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 24시 프리미엄 홈타이 및 아로마 오일 마사지. {SITE_NAME}에서 은은한 향기와 함께 피로를 풀어보세요.",
             "h1_sub": "프리미엄 아로마 마사지",
-            "hero_h2": f"{region_title} 출장 프리미엄 아로마 오일 힐링",
+            "hero_h2": f"{region_title} 출장 프리미엄 아로마 오일 마사지",
             "hero_p": "최고급 천연 오일로 피부 보습과 릴렉스를 동시에 관리하세요",
-            "section_h2": f"{region_title} 프리미엄 천연 아로마 테라피 코스",
-            "tag_suffix": "아로마 힐링"
+            "section_h2": f"{region_title} 프리미엄 천연 아로마 마사지 코스",
+            "tag_suffix": "아로마 마사지"
         },
         # 5. 프라이빗 스웨디시 감성
         {
             "title": f"{region_title} 출장 프라이빗 스웨디시 감성 힐링 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 감성 스웨디시 힐링 마사지 전문. 섬세하고 부드러운 터칭으로 최상의 릴렉스를 선사합니다.",
             "h1_sub": "스웨디시 감성 마사지",
-            "hero_h2": f"{region_title} 출장 프라이빗 스웨디시 감성 테라피",
+            "hero_h2": f"{region_title} 출장 프라이빗 스웨디시 감성 마사지",
             "hero_p": "따뜻하고 감미로운 터칭으로 하루의 스트레스를 완벽히 녹여드립니다",
-            "section_h2": f"{region_title} 감성 힐링 스웨디시 전문 매장 안내",
-            "tag_suffix": "스웨디시 케어"
+            "section_h2": f"{region_title} 감성 힐링 스웨디시 마사지 전문 매장 안내",
+            "tag_suffix": "스웨디시 마사지"
         },
         # 6. 상체 가슴 바디 릴렉싱
         {
             "title": f"{region_title} 출장 상체 가슴 바디 릴렉싱 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 전신 및 상체 가슴 릴렉스 케어 마사지. 편안한 공간에서 받는 1:1 맞춤형 힐링 프로그램입니다.",
             "h1_sub": "가슴 바디 릴렉싱 마사지",
-            "hero_h2": f"{region_title} 출장 상체 가슴 릴렉싱 케어",
+            "hero_h2": f"{region_title} 출장 상체 가슴 릴렉싱 마사지",
             "hero_p": "흐트러진 바디 밸런스를 바로잡아주는 체계적인 맞춤 솔루션",
-            "section_h2": f"{region_title} 상체 가슴 릴렉스 & 전신 바디 케어",
-            "tag_suffix": "바디 릴렉싱"
+            "section_h2": f"{region_title} 상체 가슴 릴렉스 & 전신 바디 마사지",
+            "tag_suffix": "바디 마사지"
         },
         # 7. 안심 건전 힐링 케어
         {
             "title": f"{region_title} 출장 안심 건전 힐링 케어 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 건전 인증 힐링 테라피 마사지. {SITE_NAME}은 믿을 수 있는 전문 관리사의 정성스러운 케어를 제공합니다.",
             "h1_sub": "안심 건전 힐링 케어",
-            "hero_h2": f"{region_title} 출장 안심 건전 힐링 홈서비스",
+            "hero_h2": f"{region_title} 출장 안심 건전 힐링 마사지",
             "hero_p": "철저한 위생 관리와 정직한 정찰제로 안심하고 이용하세요",
-            "section_h2": f"{region_title} 믿고 맡기는 건전 힐링 테라피",
-            "tag_suffix": "건전 테라피"
+            "section_h2": f"{region_title} 믿고 맡기는 건전 힐링 마사지",
+            "tag_suffix": "건전 마사지"
         },
         # 8. 정통 홈타이 테라피
         {
             "title": f"{region_title} 출장 정통 홈타이 바디 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 정통 홈타이 테라피 마사지 안내. 시원한 스트레칭과 압 조절로 지친 몸의 컨디션을 회복해 드립니다.",
             "h1_sub": "정통 홈타이 마사지",
-            "hero_h2": f"{region_title} 출장 정통 홈타이 스트레칭 케어",
+            "hero_h2": f"{region_title} 출장 정통 홈타이 스트레칭 마사지",
             "hero_p": "전문가의 시원한 손길로 굳은 몸의 긴장을 완벽하게 풀어냅니다",
-            "section_h2": f"{region_title} 정통 타이 바디 테라피 코스 안내",
-            "tag_suffix": "홈타이 케어"
+            "section_h2": f"{region_title} 정통 타이 바디 마사지 코스 안내",
+            "tag_suffix": "홈타이 마사지"
         },
         # 9. 맞춤 림프 드레나쥐
         {
             "title": f"{region_title} 출장 맞춤 림프 드레나쥐 마사지 & 테라피 - {SITE_NAME}",
             "desc": f"{region_title} 출장 림프 드레나쥐 및 상체 순환 마사지. 몸속 노폐물 배출과 붓기 완화에 도움을 주는 프라이빗 케어입니다.",
             "h1_sub": "림프 드레나쥐 마사지",
-            "hero_h2": f"{region_title} 출장 맞춤 림프 순환 드레나쥐",
+            "hero_h2": f"{region_title} 출장 맞춤 림프 순환 드레나쥐 마사지",
             "hero_p": "림프 흐름을 원활하게 돕는 정교하고 부드러운 테라피",
-            "section_h2": f"{region_title} 림프 드레나쥐 & 순환 힐링 케어",
-            "tag_suffix": "림프 드레나쥐"
+            "section_h2": f"{region_title} 림프 드레나쥐 & 순환 힐링 마사지",
+            "tag_suffix": "림프 마사지"
         },
         # 10. 24시 야간 홈케어
         {
             "title": f"{region_title} 출장 24시 야간 홈케어 힐링 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 24시간 언제든 편하게 부르는 야간 홈케어 마사지. {SITE_NAME}에서 늦은 밤에도 부담 없이 관리받으세요.",
             "h1_sub": "24시 야간 홈케어 마사지",
-            "hero_h2": f"{region_title} 출장 24시 야간 신속 방문 힐링",
+            "hero_h2": f"{region_title} 출장 24시 야간 신속 방문 마사지",
             "hero_p": "늦은 시간에도 고객님의 편안한 휴식을 위해 즉시 방문합니다",
-            "section_h2": f"{region_title} 24시간 언제든 이용 가능한 홈케어 매장",
-            "tag_suffix": "24시 홈케어"
+            "section_h2": f"{region_title} 24시간 언제든 이용 가능한 홈케어 마사지 매장",
+            "tag_suffix": "24시 마사지"
         },
         # 11. 가슴 림프 웰니스
         {
             "title": f"{region_title} 출장 가슴 림프 웰니스 바디 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 가슴 및 상체 림프 웰니스 바디 케어 마사지. 균형 잡힌 바디 라인과 깊은 휴식을 도와드립니다.",
             "h1_sub": "가슴 림프 웰니스 마사지",
-            "hero_h2": f"{region_title} 출장 가슴 림프 웰니스 바디 케어",
+            "hero_h2": f"{region_title} 출장 가슴 림프 웰니스 바디 마사지",
             "hero_p": "여성 및 피로한 현대인을 위한 품격 있는 웰니스 바디 프로그램",
-            "section_h2": f"{region_title} 가슴 림프 & 상체 웰니스 테라피",
-            "tag_suffix": "가슴 림프케어"
+            "section_h2": f"{region_title} 가슴 림프 & 상체 웰니스 마사지",
+            "tag_suffix": "림프 마사지"
         },
         # 12. VIP 프리미엄 방문 테라피
         {
             "title": f"{region_title} 출장 VIP 프리미엄 방문 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 최고급 VIP 프리미엄 방문 마사지 서비스. {SITE_NAME}만의 차별화된 1:1 테라피 코스를 경험해보세요.",
             "h1_sub": "VIP 방문 테라피 마사지",
-            "hero_h2": f"{region_title} 출장 VIP 프리미엄 1:1 방문 테라피",
+            "hero_h2": f"{region_title} 출장 VIP 프리미엄 1:1 방문 마사지",
             "hero_p": "차별화된 서비스와 감동을 선사하는 고품격 힐링 코스",
-            "section_h2": f"{region_title} VIP 프리미엄 방문 케어 리스트",
-            "tag_suffix": "VIP 테라피"
+            "section_h2": f"{region_title} VIP 프리미엄 방문 마사지 리스트",
+            "tag_suffix": "VIP 마사지"
         },
         # 13. 전신 피로회복 딥티슈
         {
             "title": f"{region_title} 출장 전신 피로회복 딥티슈 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 피로회복 중심 딥티슈 테라피 마사지. 깊은 근육층까지 세심하게 케어하여 활력을 되찾아 드립니다.",
             "h1_sub": "피로회복 딥티슈 마사지",
-            "hero_h2": f"{region_title} 출장 전신 피로회복 딥티슈 케어",
+            "hero_h2": f"{region_title} 출장 전신 피로회복 딥티슈 마사지",
             "hero_p": "깊은 속근육까지 시원하게 케어하여 무거운 피로감을 해소합니다",
-            "section_h2": f"{region_title} 만성 피로 해소 딥티슈 테라피 코스",
-            "tag_suffix": "피로회복 케어"
+            "section_h2": f"{region_title} 만성 피로 해소 딥티슈 마사지 코스",
+            "tag_suffix": "딥티슈 마사지"
         },
         # 14. 힐링 에스테틱 홈스파
         {
             "title": f"{region_title} 출장 힐링 에스테틱 홈스파 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 홈스파 & 에스테틱 감성 마사지. 집에서 즐기는 럭셔리 힐링 타임을 {SITE_NAME}과 함께하세요.",
             "h1_sub": "에스테틱 홈스파 마사지",
-            "hero_h2": f"{region_title} 출장 프라이빗 에스테틱 홈스파",
+            "hero_h2": f"{region_title} 출장 프라이빗 에스테틱 홈스파 마사지",
             "hero_p": "에스테틱 샵의 감동을 고객님의 방 안에서 그대로 재현합니다",
-            "section_h2": f"{region_title} 에스테틱 홈스파 & 뷰티 바디 프로그램",
-            "tag_suffix": "에스테틱 홈스파"
+            "section_h2": f"{region_title} 에스테틱 홈스파 & 뷰티 바디 마사지",
+            "tag_suffix": "홈스파 마사지"
         },
         # 15. 상체 집중 릴렉스
         {
             "title": f"{region_title} 출장 상체 집중 릴렉스 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 목, 어깨, 상체 가슴 집중 릴렉스 마사지. 굳은 상체 근육을 부드럽게 풀어 가벼운 몸을 만들어 드립니다.",
             "h1_sub": "상체 집중 릴렉스 마사지",
-            "hero_h2": f"{region_title} 출장 목·어깨·상체 집중 릴렉스",
+            "hero_h2": f"{region_title} 출장 목·어깨·상체 집중 릴렉스 마사지",
             "hero_p": "오랜 좌식 생활로 굳은 상체 라인을 부드럽게 이완합니다",
-            "section_h2": f"{region_title} 상체 집중 릴렉싱 바디 케어 안내",
-            "tag_suffix": "상체 릴렉스"
+            "section_h2": f"{region_title} 상체 집중 릴렉싱 바디 마사지 안내",
+            "tag_suffix": "릴렉스 마사지"
         },
         # 16. 건전 힐링 아로마
         {
             "title": f"{region_title} 출장 건전 힐링 아로마 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 건전 지향 아로마 테라피 마사지. 최고급 천연 오일을 사용하여 피부 보습과 릴렉스를 동시에 관리합니다.",
             "h1_sub": "건전 아로마 테라피 마사지",
-            "hero_h2": f"{region_title} 출장 안심 건전 천연 아로마 케어",
+            "hero_h2": f"{region_title} 출장 안심 건전 천연 아로마 마사지",
             "hero_p": "은은한 아로마 향기와 함께 편안한 휴식의 시간을 선물합니다",
-            "section_h2": f"{region_title} 건전 아로마 테라피 & 힐링 프로그램",
-            "tag_suffix": "아로마 테라피"
+            "section_h2": f"{region_title} 건전 아로마 테라피 & 힐링 마사지",
+            "tag_suffix": "아로마 마사지"
         },
         # 17. 1:1 방문 맞춤 컨디셔닝
         {
             "title": f"{region_title} 출장 1:1 방문 맞춤 컨디셔닝 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 체형 맞춤 컨디셔닝 바디 마사지. 개개인의 신체 컨디션에 맞춘 최적의 테라피 솔루션을 제공합니다.",
             "h1_sub": "맞춤 컨디셔닝 마사지",
-            "hero_h2": f"{region_title} 출장 1:1 맞춤 바디 컨디셔닝",
+            "hero_h2": f"{region_title} 출장 1:1 맞춤 바디 컨디셔닝 마사지",
             "hero_p": "당신의 바디 컨디션에 최적화된 맞춤형 힐링 플랜",
-            "section_h2": f"{region_title} 1:1 맞춤 컨디셔닝 바디 테라피",
-            "tag_suffix": "맞춤 컨디셔닝"
+            "section_h2": f"{region_title} 1:1 맞춤 컨디셔닝 바디 마사지",
+            "tag_suffix": "맞춤 마사지"
         },
         # 18. 소프트 감성 스웨디시
         {
             "title": f"{region_title} 출장 소프트 감성 힐링 스웨디시 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 소프트 힐링 스웨디시 테라피 마사지. 부드럽고 섬세한 터치감으로 긴장된 하루의 스트레스를 완화합니다.",
             "h1_sub": "감성 힐링 스웨디시 마사지",
-            "hero_h2": f"{region_title} 출장 소프트 감성 스웨디시 케어",
+            "hero_h2": f"{region_title} 출장 소프트 감성 스웨디시 마사지",
             "hero_p": "섬세한 감성 터칭으로 깊은 안정감과 휴식을 선사합니다",
-            "section_h2": f"{region_title} 감성 스웨디시 테라피 전문 안내",
-            "tag_suffix": "감성 스웨디시"
+            "section_h2": f"{region_title} 감성 스웨디시 마사지 전문 안내",
+            "tag_suffix": "스웨디시 마사지"
         },
         # 19. 바디 밸런스 림프
         {
             "title": f"{region_title} 출장 바디 밸런스 림프 순환 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 전신 및 가슴 림프 순환 마사지. 몸의 균형을 되찾아주는 프라이빗 테라피스트의 정성 가득한 방문 케어.",
             "h1_sub": "바디 밸런스 림프 마사지",
-            "hero_h2": f"{region_title} 출장 바디 밸런스 & 림프 순환 케어",
+            "hero_h2": f"{region_title} 출장 바디 밸런스 & 림프 순환 마사지",
             "hero_p": "무너진 신체 밸런스를 건강하게 되찾아 드립니다",
-            "section_h2": f"{region_title} 전신 림프 순환 & 바디 밸런싱 코스",
-            "tag_suffix": "바디 밸런스"
+            "section_h2": f"{region_title} 전신 림프 순환 & 바디 밸런스 마사지",
+            "tag_suffix": "밸런스 마사지"
         },
         # 20. 프리미엄 홈타이 힐링
         {
             "title": f"{region_title} 출장 프리미엄 홈타이 힐링 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_title} 출장 24시 프리미엄 홈타이 힐링 마사지. 깔끔하고 정돈된 전문 홈케어 서비스로 완벽한 휴식을 약속합니다.",
             "h1_sub": "프리미엄 홈타이 마사지",
-            "hero_h2": f"{region_title} 출장 프리미엄 홈타이 힐링 케어",
+            "hero_h2": f"{region_title} 출장 프리미엄 홈타이 힐링 마사지",
             "hero_p": "언제 어디서든 가장 편안하게 누리는 고품격 홈타이",
-            "section_h2": f"{region_title} 프리미엄 홈타이 & 바디 힐링 매장",
-            "tag_suffix": "홈타이 힐링"
+            "section_h2": f"{region_title} 프리미엄 홈타이 & 바디 마사지 매장",
+            "tag_suffix": "홈타이 마사지"
         }
     ]
     return random.choice(templates)
 
-# 5개 업체 데이터 (2번 퀸즈홈테라피로 교체 완료)
+# 5개 업체 데이터 (로컬 이미지 경로 및 퀸즈홈테라피 반영)
 VENDORS = [
     {
         "name": "미인클럽테라피",
         "phone": "0507-1280-3193",
-        "image": "/images/shop1.jpg",  # 1번 샵 이미지
+        "image": "/images/shop1.jpg",
         "tagline": "★ {region_title} 전 지역 30분 내 신속 방문 케어 지원",
         "courses": "시그니처 바디케어, 프리미엄 아로마 힐링 코스",
         "features": "전문 자격 관리사, 천연 에센셜 오일, 맞춤 릴렉싱 컨디셔닝"
@@ -223,7 +223,7 @@ VENDORS = [
     {
         "name": "퀸즈홈테라피",
         "phone": "0507-1280-3334",
-        "image": "/images/shop2.jpg",  # 2번 샵 이미지
+        "image": "/images/shop2.jpg",
         "tagline": "★ 감성적이고 부드러운 스페셜 림프 & 스웨디시 케어",
         "courses": "스웨디시 딥티슈 케어, 전신 림프 순환 프로그램",
         "features": "24시간 운영, 1:1 맞춤 프라이빗 테라피, 철저한 소독 관리"
@@ -231,7 +231,7 @@ VENDORS = [
     {
         "name": "한국골든테라피",
         "phone": "0507-1280-3361",
-        "image": "/images/shop3.jpg",  # 3번 샵 이미지
+        "image": "/images/shop3.jpg",
         "tagline": "★ 실력파 한국인 전문 테라피스트의 품격 있는 골든 케어",
         "courses": "VIP 골든 힐링 코스, 맞춤형 근육 이완 케어, 센슈얼 아로마",
         "features": "베테랑 한국인 관리사 항시 대기, 투명한 정찰제 시스템"
@@ -239,7 +239,7 @@ VENDORS = [
     {
         "name": "기쁨조테라피",
         "phone": "0507-1280-3223",
-        "image": "/images/shop4.jpg",  # 4번 샵 이미지
+        "image": "/images/shop4.jpg",
         "tagline": "★ 하루의 피로와 스트레스를 풀어주는 활력 집중 케어",
         "courses": "스페셜 콤보 힐링 케어, 호텔식 VIP 1:1 집중 관리",
         "features": "{region_title} 신속 출동, 고객 맞춤형 압 조절 및 피로회복"
@@ -247,7 +247,7 @@ VENDORS = [
     {
         "name": "한국미인테라피",
         "phone": "0507-1280-3303",
-        "image": "/images/shop5.jpg",  # 5번 샵 이미지
+        "image": "/images/shop5.jpg",
         "tagline": "★ 친절하고 섬세한 힐링 테라피, 안심 후불제 운영",
         "courses": "클래식 테라피, 습식 프리미엄 아로마, 전신 스페셜 코스",
         "features": "합리적이고 투명한 요금 구성, 정성 가득한 일대일 고객 응대"
@@ -317,12 +317,11 @@ REGIONS = {
 }
 
 def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], current_dong=""):
-    """구/시 및 동별 페이지 생성 (출장 [완충단어] 마사지 적용)"""
+    """구/시 및 동별 페이지 생성 (새로고침 시 자바스크립트로 샵 랜덤 셔플 적용)"""
     tpl = get_seo_template(display_title)
-    shuffled_vendors = random.sample(VENDORS, len(VENDORS))
     
     vendor_html_blocks = []
-    for idx, vendor in enumerate(shuffled_vendors, start=1):
+    for idx, vendor in enumerate(VENDORS, start=1):
         tagline_formatted = vendor["tagline"].format(region_title=display_title)
         features_formatted = vendor["features"].format(region_title=display_title)
         clean_phone = vendor['phone'].replace("-", "")
@@ -334,7 +333,7 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
             <div class="vendor-body">
                 <div class="vendor-header">
                     <div>
-                        <span class="vendor-badge">추천 0{idx}</span>
+                        <span class="vendor-badge">추천 매장</span>
                         <span class="vendor-title">{vendor['name']}</span>
                     </div>
                     <div class="vendor-tagline">{tagline_formatted}</div>
@@ -379,7 +378,7 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{tpl['title']}">
     <meta property="og:description" content="{tpl['desc']}">
-    <meta property="og:image" content="{shuffled_vendors[0]['image']}">
+    <meta property="og:image" content="{VENDORS[0]['image']}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -433,7 +432,9 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
         
         <h2 class="section-title">{tpl['section_h2']}</h2>
 
+        <div id="vendor-container">
 {vendors_rendered}
+        </div>
 
         <!-- 세부 동 바로가기 링크 카드 -->
         <div class="card">
@@ -452,6 +453,21 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
     <footer>
         <p>© {SITE_NAME}. All rights reserved.</p>
     </footer>
+
+    <!-- 새로고침 시 샵 순서 랜덤 셔플 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {{
+            const container = document.getElementById("vendor-container");
+            if (container) {{
+                const cards = Array.from(container.getElementsByClassName("vendor-card"));
+                for (let i = cards.length - 1; i > 0; i--) {{
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [cards[i], cards[j]] = [cards[j], cards[i]];
+                }}
+                cards.forEach(card => container.appendChild(card));
+            }}
+        }});
+    </script>
 </body>
 </html>
 """
@@ -489,7 +505,7 @@ def generate_clean_root_index():
         header {{ background: #161821; padding: 18px 20px; text-align: center; border-bottom: 2px solid #d4af37; position: sticky; top: 0; z-index: 100; }}
         header h1 {{ font-size: 1.3rem; color: #ffffff; }}
         header h1 span {{ color: #d4af37; }}
-        .hero {{ background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 50px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }}
+        .hero {{ background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('/images/banner.jpg') center/cover; padding: 50px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }}
         .hero h2 {{ font-size: 1.6rem; color: #fff; margin-bottom: 10px; }}
         .hero p {{ font-size: 0.95rem; color: #d4af37; }}
         .container {{ max-width: 850px; margin: 0 auto; padding: 25px 15px; }}
