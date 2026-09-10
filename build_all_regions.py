@@ -210,7 +210,7 @@ def get_seo_template(region_title):
     ]
     return random.choice(templates)
 
-# 5개 업체 데이터 (로컬 이미지 경로 및 퀸즈홈테라피 반영)
+# 5개 업체 데이터
 VENDORS = [
     {
         "name": "미인클럽테라피",
@@ -254,9 +254,8 @@ VENDORS = [
     }
 ]
 
-# 서울, 경기, 인천 전체 지역 및 하위 구·군 완벽 포함 데이터
+# 서울, 경기, 인천 전체 지역 데이터
 REGIONS = {
-    # [서울 25개 구]
     "gangnam": {"name": "서울 강남구", "dongs": ["역삼동", "개포동", "청담동", "삼성동", "대치동", "신사동", "논현동", "압구정동", "세곡동", "자곡동", "일원동", "수서동", "도곡동"]},
     "gangdong": {"name": "서울 강동구", "dongs": ["명일동", "고덕동", "상일동", "길동", "둔촌동", "암사동", "성내동", "천호동", "강일동"]},
     "gangbuk": {"name": "서울 강북구", "dongs": ["미아동", "번동", "수유동", "우이동"]},
@@ -282,37 +281,27 @@ REGIONS = {
     "jongno": {"name": "서울 종로구", "dongs": ["청운동", "효자동", "사직동", "삼청동", "부암동", "평창동", "가회동", "혜화동", "명륜동"]},
     "junggu": {"name": "서울 중구", "dongs": ["소공동", "회현동", "명동", "필동", "장충동", "을지로동", "신당동", "약수동", "황학동"]},
     "jungnang": {"name": "서울 중랑구", "dongs": ["면목동", "상봉동", "중화동", "묵동", "망우동", "신내동"]},
-
-    # [경기 시·군 및 하위 구]
     "suwon-jangan": {"name": "수원 장안구", "dongs": ["정자동", "조원동", "파장동", "송죽동", "영화동", "지동", "율전동"]},
     "suwon-gwonseon": {"name": "수원 권선구", "dongs": ["세류동", "권선동", "곡반정동", "탑동", "금곡동", "호매실동"]},
     "suwon-paldal": {"name": "수원 팔달구", "dongs": ["매교동", "매산동", "고등동", "화서동", "인계동"]},
     "suwon-yeongtong": {"name": "수원 영통구", "dongs": ["매탄동", "원천동", "영통동", "하동", "이의동", "광교동"]},
-    
     "seongnam-sujeong": {"name": "성남 수정구", "dongs": ["신흥동", "태평동", "수진동", "단대동", "산성동", "상대원동"]},
     "seongnam-jungwon": {"name": "성남 중원구", "dongs": ["성남동", "중앙동", "금광동", "은행동", "하대원동"]},
     "seongnam-bundang": {"name": "성남 분당구", "dongs": ["분당동", "수내동", "정자동", "서현동", "이매동", "야탑동", "판교동", "금곡동", "구미동"]},
-    
     "uijeongbu": {"name": "경기 의정부시", "dongs": ["의정부동", "호원동", "장암동", "신곡동", "송산동", "자금동", "가능동", "민락동", "낙양동"]},
-    
     "anyang-manan": {"name": "안양 만안구", "dongs": ["안양동", "석수동", "박달동"]},
     "anyang-dongan": {"name": "안양 동안구", "dongs": ["비산동", "관양동", "평촌동", "호계동", "범계동"]},
-    
     "bucheon-wonmi": {"name": "부천 원미동", "dongs": ["원미동", "심곡동", "춘의동", "도당동", "상동", "중동"]},
     "bucheon-sosa": {"name": "부천 소사구", "dongs": ["소사본동", "범박동", "역곡동", "송내동", "괴안동"]},
     "bucheon-ojeong": {"name": "부천 오정구", "dongs": ["오정동", "고강동", "원종동", "성곡동"]},
-    
     "gwangmyeong": {"name": "경기 광명시", "dongs": ["철산동", "하안동", "소하동", "일직동", "광명동", "옥길동", "학온동"]},
     "pyeongtaek": {"name": "경기 평택시", "dongs": ["고덕동", "비전동", "세교동", "안중읍", "포승읍", "송탄동", "서정동", "동삭동", "용이동"]},
     "dongducheon": {"name": "경기 동두천시", "dongs": ["생연동", "보산동", "동두천동", "지행동", "송내동"]},
-    
     "ansan-sangrok": {"name": "안산 상록구", "dongs": ["사동", "본오동", "일동", "이동", "반월동", "성포동"]},
     "ansan-danwon": {"name": "안산 단원구", "dongs": ["고잔동", "중앙동", "초지동", "선부동", "와동", "대부동"]},
-    
     "goyang-deogyang": {"name": "고양 덕양구", "dongs": ["화정동", "행신동", "원당동", "삼송동", "원흥동", "지축동", "향동동"]},
     "goyang-ilsandong": {"name": "고양 일산동구", "dongs": ["백석동", "마두동", "정발산동", "중산동", "식사동", "풍동"]},
     "goyang-ilsanseo": {"name": "고양 일산서구", "dongs": ["주엽동", "일산동", "탄현동", "대화동", "가좌동"]},
-    
     "gwacheon": {"name": "경기 과천시", "dongs": ["중앙동", "갈현동", "문원동", "별양동", "부림동"]},
     "guri": {"name": "경기 구리시", "dongs": ["인창동", "수택동", "교문동", "토평동", "갈매동"]},
     "namyangju": {"name": "경기 남양주시", "dongs": ["다산동", "별내동", "와부읍", "진접읍", "화도읍", "평내동", "호평동", "오남읍", "퇴계원읍"]},
@@ -321,11 +310,9 @@ REGIONS = {
     "gunpo": {"name": "경기 군포시", "dongs": ["산본동", "금정동", "당동", "당정동", "대야미동", "부곡동", "도마교동"]},
     "uiwang": {"name": "경기 의왕시", "dongs": ["고천동", "부곡동", "내손동", "청계동", "오전동"]},
     "hanam": {"name": "경기 하남시", "dongs": ["미사동", "위례동", "신장동", "덕풍동", "감일동", "풍산동", "망월동", "선동"]},
-    
     "yongin-cheoin": {"name": "용인 처인구", "dongs": ["김량장동", "역북동", "삼가동", "유방동", "고림동", "포곡읍", "모현읍"]},
     "yongin-giheung": {"name": "용인 기흥구", "dongs": ["신갈동", "구갈동", "상갈동", "보정동", "동백동", "마북동", "언남동", "청덕동"]},
     "yongin-suji": {"name": "용인 수지구", "dongs": ["풍덕천동", "죽전동", "상현동", "성복동", "신봉동", "동천동"]},
-    
     "paju": {"name": "경기 파주시", "dongs": ["운정동", "교하동", "금촌동", "문산읍", "야당동", "동패동", "와동동", "목동동", "다율동"]},
     "icheon": {"name": "경기 이천시", "dongs": ["창전동", "관고동", "증포동", "부발읍", "안흥동", "송정동", "갈산동"]},
     "anseong": {"name": "경기 안성시", "dongs": ["성남동", "공도읍", "대덕면", "일죽면", "죽산면", "삼죽면", "보개면"]},
@@ -338,8 +325,6 @@ REGIONS = {
     "yeoncheon": {"name": "경기 연천군", "dongs": ["연천읍", "전곡읍", "군남면", "청산면", "백학면"]},
     "gapyeong": {"name": "경기 가평군", "dongs": ["가평읍", "설악면", "청평면", "상면", "조종면"]},
     "yangpyeong": {"name": "경기 양평군", "dongs": ["양평읍", "강상면", "강하면", "옥천면", "서종면", "지평면"]},
-
-    # [인천 주요 구·군]
     "jemulpo": {"name": "인천 제물포구", "dongs": ["내동", "사동", "신생동", "선린동", "북성동"]},
     "yeongjong": {"name": "인천 영종구", "dongs": ["운서동", "중산동", "운남동", "운북동"]},
     "michuhol": {"name": "인천 미추홀구", "dongs": ["주안동", "도화동", "숭의동", "용현동", "학익동", "관교동", "문학동"]},
@@ -354,9 +339,7 @@ REGIONS = {
 }
 
 def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], current_dong=""):
-    """구/시 및 동별 페이지 생성 (네이버 소유확인 메타 태그 및 샵 랜덤 셔플 적용)"""
     tpl = get_seo_template(display_title)
-    
     vendor_html_blocks = []
     for idx, vendor in enumerate(VENDORS, start=1):
         tagline_formatted = vendor["tagline"].format(region_title=display_title)
@@ -413,10 +396,12 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{canonical_url}">
     
+    <!-- Open Graph 태그 -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{tpl['title']}">
     <meta property="og:description" content="{tpl['desc']}">
-    <meta property="og:image" content="{VENDORS[0]['image']}">
+    <meta property="og:image" content="{BASE_URL}{VENDORS[0]['image']}">
+    <meta property="og:url" content="{canonical_url}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -512,8 +497,8 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
 
 def generate_clean_root_index():
     """
-    루트 메인 페이지 (index.html)
-    - '출장' 및 '마사지' 키워드를 100% 배제하고 순수 1:1 방문 홈케어 & 웰니스 테라피로 구성
+    루트 메인 페이지 (index.html) 생성 함수
+    - 모든 확장 지역 링크 및 Open Graph 메타 태그 완벽 포함
     """
     region_links = []
     for folder, data in REGIONS.items():
@@ -533,6 +518,13 @@ def generate_clean_root_index():
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{BASE_URL}/">
 
+    <!-- Open Graph 태그 추가 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="수도권 24시 방문 홈케어 & 1:1 프라이빗 바디 테라피 - {SITE_NAME}">
+    <meta property="og:description" content="서울, 경기, 인천 전 지역 신속 1:1 방문 홈케어 및 안심 힐링 에스테틱 전문 {SITE_NAME}. 24시간 언제나 편안한 공간에서 맞춤 바디 테라피를 누려보세요.">
+    <meta property="og:image" content="{BASE_URL}/images/banner.jpg">
+    <meta property="og:url" content="{BASE_URL}/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
@@ -547,7 +539,7 @@ def generate_clean_root_index():
         .hero {{ background: linear-gradient(rgba(15,17,23,0.8), rgba(15,17,23,0.9)), url('/images/banner.jpg') center/cover; padding: 50px 20px; text-align: center; border-bottom: 1px solid #2a2d37; }}
         .hero h2 {{ font-size: 1.6rem; color: #fff; margin-bottom: 10px; }}
         .hero p {{ font-size: 0.95rem; color: #d4af37; }}
-        .container {{ max-width: 850px; margin: 0 auto; padding: 25px 15px; }}
+        .container {{ max-width: 900px; margin: 0 auto; padding: 25px 15px; }}
         .card {{ background: #161821; border: 1px solid #2a2d37; border-radius: 12px; padding: 22px; margin-top: 20px; }}
         .card h3 {{ color: #d4af37; font-size: 1.15rem; margin-bottom: 12px; border-left: 4px solid #d4af37; padding-left: 10px; }}
         .dong-wrap {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }}
@@ -569,7 +561,7 @@ def generate_clean_root_index():
     <div class="container">
         <div class="card">
             <h3>서비스 제공 지역 안내</h3>
-            <p>원하시는 지역을 선택하시면 해당 구·시의 상세 안내 페이지로 이동합니다.</p>
+            <p>원하시는 지역을 선택하시면 해당 구·시·군의 상세 안내 페이지로 이동합니다.</p>
             <div class="dong-wrap">
                 {region_links_html}
             </div>
