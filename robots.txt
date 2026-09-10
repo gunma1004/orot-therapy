@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blissbody.netlify.app/sitemap.xml
+Sitemap: https://orot-therapy.netlify.app/sitemap.xml

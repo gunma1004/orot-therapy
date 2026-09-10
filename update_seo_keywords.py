@@ -2,7 +2,7 @@ import os
 import re
 import random
 
-SITE_NAME = "블레스바디"
+SITE_NAME = "오롯테라피"
 
 # 서울, 경기, 인천 전체 지역 폴더명 매핑 (영문 폴더명: 한글 지역명)
 REGION_MAP = {
@@ -225,7 +225,7 @@ def generate_seo_meta(region_name):
         },
         # 20. 프리미엄 홈타이 힐링
         {
-            "title": f"{region_title} 출장 프리미엄 홈타이 힐링 테라피 마사지 - {SITE_NAME}" if 'region_title' in locals() else f"{region_name} 출장 프리미엄 홈타이 힐링 테라피 마사지 - {SITE_NAME}",
+            "title": f"{region_name} 출장 프리미엄 홈타이 힐링 테라피 마사지 - {SITE_NAME}",
             "desc": f"{region_name} 출장 24시 프리미엄 홈타이 힐링 마사지. 깔끔하고 정돈된 전문 홈케어 서비스로 완벽한 휴식을 약속합니다.",
             "h1": f"{region_name} 출장 <span>프리미엄 홈타이 마사지</span>",
             "h2": f"편안한 내 집에서 누리는 {region_name} 프리미엄 홈타이 힐링 서비스",
@@ -238,17 +238,12 @@ def generate_seo_meta(region_name):
     return random.choice(templates)
 
 def update_html_content(content, region_name, meta):
-    """
-    <head> 메타태그뿐만 아니라 body 내부의 h1, h2, img alt, 하단 링크 텍스트까지 안전 치환
-    """
-    # 1. <title> 교체
     content = re.sub(
         r'<title>(.*?)</title>',
         f'<title>{meta["title"]}</title>',
         content, flags=re.IGNORECASE | re.DOTALL
     )
 
-    # 2. <meta description> 교체
     if re.search(r'<meta\s+name=["\']description["\']', content, re.IGNORECASE):
         content = re.sub(
             r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']\s*/?>',
@@ -262,7 +257,6 @@ def update_html_content(content, region_name, meta):
             content, count=1, flags=re.IGNORECASE
         )
 
-    # 3. Open Graph 교체
     if re.search(r'<meta\s+property=["\']og:title["\']', content, re.IGNORECASE):
         content = re.sub(
             r'<meta\s+property=["\']og:title["\']\s+content=["\'](.*?)["\']\s*/?>',
@@ -277,14 +271,12 @@ def update_html_content(content, region_name, meta):
             content, flags=re.IGNORECASE | re.DOTALL
         )
 
-    # 4. <h1> 메인 타이틀 교체
     content = re.sub(
         r'<h1>(.*?)</h1>',
         f'<h1>{meta["h1"]}</h1>',
         content, flags=re.IGNORECASE | re.DOTALL
     )
 
-    # 5. <h2> 서브 타이틀 교체 (첫 번째 주요 h2)
     if re.search(r'<h2>(.*?)</h2>', content, re.IGNORECASE):
         content = re.sub(
             r'<h2>(.*?)</h2>',
@@ -292,7 +284,6 @@ def update_html_content(content, region_name, meta):
             content, count=1, flags=re.IGNORECASE | re.DOTALL
         )
 
-    # 6. 이미지 <img>의 alt 속성 보정
     content = re.sub(
         r'<img([^>]*?)alt=["\'](.*?)["\']([^>]*?)>',
         lambda m: f'<img{m.group(1)}alt="{region_name} 프라이빗 힐링 바디 테라피"{m.group(3)}>'
@@ -300,17 +291,14 @@ def update_html_content(content, region_name, meta):
         content, flags=re.IGNORECASE
     )
 
-    # 7. 동 목록 태그 링크 텍스트 보정 (예: '역삼동 출장마사지' -> '역삼동 홈케어 테라피')
     content = re.sub(
         r'(<a[^>]*class=["\'][^"\']*dong-tag[^"\']*["\'][^>]*>)(.*?)(</a>)',
         lambda m: f'{m.group(1)}{re.sub(r"출장\s*마사지", meta["tag_suffix"], m.group(2))}{m.group(3)}',
         content, flags=re.IGNORECASE
     )
 
-    # 8. 본문 텍스트 내 단순 '출장마사지' 단어 안전 일괄 치환
     def replace_text_between_tags(match):
         text = match.group(0)
-        # 띄어쓰기 여부 무관하게 붙여쓴 '출장마사지'와 '출장 마사지'를 우회 문구로 정리
         text = re.sub(r'(?:' + re.escape(region_name) + r'\s*)?출장\s*마사지', meta["replace_word"], text)
         return text
 
@@ -325,7 +313,6 @@ def update_all_html_files():
     updated_count = 0
     
     for root, dirs, files in os.walk(current_dir):
-        # 숨김 폴더(.git 등) 제외
         dirs[:] = [d for d in dirs if not d.startswith((".", "_"))]
         
         for file in files:
@@ -336,29 +323,24 @@ def update_all_html_files():
                 path_parts = [p.lower() for p in norm_path.split(os.sep)]
                 file_name_only = os.path.splitext(file)[0]
                 
-                # 1. 루트 index.html 스킵
                 if rel_path == "index.html":
                     print(f"⏩ [스킵 - 루트 메인 페이지] {rel_path}")
                     continue
 
-                # 2. 폴더명에서 시/구 지역명 추출
                 gu_name = None
                 for key, val in REGION_MAP.items():
                     if key in path_parts:
                         gu_name = val
                         break
 
-                # 3. 세부 동 파일인 경우 (예: 역삼동.html) -> '강남구 역삼동' 형태로 조합
                 if gu_name:
                     if file_name_only.lower() != "index":
                         region_name = f"{gu_name} {file_name_only}"
                     else:
                         region_name = gu_name
                 else:
-                    # 폴더 매핑 실패 시 파일 내용에서 감지
                     region_name = None
 
-                # 파일 읽기
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
@@ -369,18 +351,13 @@ def update_all_html_files():
                     except Exception:
                         continue
 
-                # 지역명 최종 폴백
                 if not region_name:
                     match = re.search(r'([가-힣]{2,4}[구|시])', content)
                     region_name = match.group(1) if match else "수도권"
 
-                # 20가지 우회 템플릿 중 하나 랜덤 추출
                 meta_info = generate_seo_meta(region_name)
-
-                # 전체 태그 및 본문 일괄 치환
                 updated_content = update_html_content(content, region_name, meta_info)
 
-                # 파일 저장
                 try:
                     with open(file_path, 'w', encoding='utf-8') as f:
                         f.write(updated_content)

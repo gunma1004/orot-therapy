@@ -1,8 +1,8 @@
 import os
 import random
 
-SITE_NAME = "블레스바디"
-BASE_URL = "https://blissbody.netlify.app"
+SITE_NAME = "오롯테라피"
+BASE_URL = "https://orot-therapy.netlify.app"
 
 # 구/동 전용 20가지 우회 템플릿 ('출장 [완충단어] 마사지' 구조 적용)
 def get_seo_template(region_title):
@@ -210,7 +210,7 @@ def get_seo_template(region_title):
     ]
     return random.choice(templates)
 
-# 5개 업체 데이터
+# 5개 업체 데이터 (2번 퀸즈홈테라피로 교체 완료)
 VENDORS = [
     {
         "name": "미인클럽테라피",
@@ -221,10 +221,10 @@ VENDORS = [
         "features": "전문 자격 관리사, 천연 에센셜 오일, 맞춤 릴렉싱 컨디셔닝"
     },
     {
-        "name": "혼혈스웨디시테라피",
+        "name": "퀸즈홈테라피",
         "phone": "0507-1280-3334",
         "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-        "tagline": "★ 감성적이고 부드러운 스페셜 림프 & 스웨디시 케어",
+        "tagline": "★ 감성적이고 부드러운 스페셜 림프 & 프라이빗 홈케어",
         "courses": "스웨디시 딥티슈 케어, 전신 림프 순환 프로그램",
         "features": "24시간 운영, 1:1 맞춤 프라이빗 테라피, 철저한 소독 관리"
     },
@@ -354,7 +354,6 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
 
     vendors_rendered = "\n".join(vendor_html_blocks)
 
-    # 동 목록 링크 (붙여쓰기 완전 배제)
     dong_links = []
     for d in dongs_data:
         active_style = ' style="border-color:#d4af37; color:#d4af37; font-weight:bold;"' if d == current_dong else ''
@@ -362,7 +361,6 @@ def generate_sub_html(display_title, folder_name, is_dong=False, dongs_data=[], 
     
     dong_wrap_html = "\n                ".join(dong_links)
     
-    # Canonical 및 네비게이션 경로
     canonical_url = f"{BASE_URL}/{folder_name}/{current_dong}.html" if is_dong else f"{BASE_URL}/{folder_name}/"
     parent_link = f'/{folder_name}/' if is_dong else '/'
     parent_text = '← 구/시 메인으로' if is_dong else '← 전체 홈으로'
@@ -537,22 +535,18 @@ def generate_all():
     gu_count = 0
     dong_count = 0
 
-    # 1. 루트 클린 메인 index.html 생성
     generate_clean_root_index()
 
-    # 2. 구/시 및 동별 세부 페이지 생성
     for folder, data in REGIONS.items():
         os.makedirs(folder, exist_ok=True)
         region_title = data["name"]
         dongs = data["dongs"]
 
-        # 구/시 메인 페이지 생성 (index.html)
         gu_html = generate_sub_html(region_title, folder, is_dong=False, dongs_data=dongs)
         with open(os.path.join(folder, "index.html"), "w", encoding="utf-8") as f:
             f.write(gu_html)
         gu_count += 1
 
-        # 각 동별 세부 페이지 생성 (동이름.html)
         for dong in dongs:
             dong_title = f"{region_title} {dong}"
             dong_html = generate_sub_html(dong_title, folder, is_dong=True, dongs_data=dongs, current_dong=dong)
